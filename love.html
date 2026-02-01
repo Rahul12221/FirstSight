@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Be My Valentine</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffb6b6, #ffc6d9);
+    }
+
+    .card {
+      background: white;
+      width: 340px;
+      padding: 30px 20px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    .no-btn {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ddd;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    h1 {
+      color: #ff4f7a;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 25px;
+      color: #444;
+    }
+
+    .yes-btn {
+      background: #ff4f7a;
+      color: white;
+      border: none;
+      padding: 14px 40px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(255, 79, 122, 0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .yes-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .shy-text {
+      margin-top: 20px;
+      color: #ff4f7a;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="no-btn" id="noBtn">No 🙈</div>
+
+    <h1>Hey Omi 💕</h1>
+    <p>Will you be my Valentine?You are my love at first sight in office lunch</p>
+
+    <button class="yes-btn" onclick="alert('YAY!! You know who I'm')">
+      Yes ✨
+    </button>
+
+    <div class="shy-text">"No" seems a bit shy 😈</div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 260;
+      const y = Math.random() * 120;
+
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+  </script>
+
+</body>
+</html>
